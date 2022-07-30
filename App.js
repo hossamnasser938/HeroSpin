@@ -18,7 +18,7 @@ const PickRandomMovieStack = () => (
 );
 
 const ChooseSuperHeroStack = () => (
-  <ChooseSuperHeroStackNavigator.Navigator>
+  <ChooseSuperHeroStackNavigator.Navigator screenOptions={{header: () => null}}>
     <ChooseSuperHeroStackNavigator.Screen name="ChooseSuperHeroScreen" component={ChooseSuperHeroScreen}/>
     <PickRandomMovieStackNavigator.Screen name="RandomMovieScreen" component={RandomMovieScreen}/>
   </ChooseSuperHeroStackNavigator.Navigator>

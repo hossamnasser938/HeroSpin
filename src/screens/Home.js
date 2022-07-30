@@ -1,12 +1,42 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, Button, Image, StyleSheet} from 'react-native';
 
 const HomeScreen = props => {
     return (
-        <View>
-            <Text>Home Screen</Text>
+        <View style={styles.container}>
+            <Image source={require('../../assets/images/RandomIcon.png')} style={styles.image}/>
+
+            <Text style={styles.title}>
+                Not Sure What to Watch?
+            </Text>
+
+            <Text style={styles.hint}>
+                Hit "Play Something" and we will pick you the best movie to watch
+            </Text>
+
+            <Button title="Play Something" />
         </View>
     );
 };
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        alignItems: 'center',
+        padding: 20,
+        backgroundColor: 'white'
+    },
+    image: {
+        marginVertical: 40
+    },
+    title: {
+        fontWeight: 'bold',
+        fontSize: 20,
+    },
+    hint: {
+        marginVertical: 20,
+        textAlign: 'center'
+    }
+});
 
 export default HomeScreen;

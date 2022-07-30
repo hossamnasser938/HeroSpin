@@ -1,7 +1,14 @@
+import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import {View, Text, Button, Image, StyleSheet} from 'react-native';
 
 const HomeScreen = props => {
+    const {navigate} = useNavigation();
+
+    const navigateToRandomMovieScreen = () => {
+        navigate('RandomMovie');
+    };
+
     return (
         <View style={styles.container}>
             <Image source={require('../../assets/images/RandomIcon.png')} style={styles.image}/>
@@ -14,7 +21,7 @@ const HomeScreen = props => {
                 Hit "Play Something" and we will pick you the best movie to watch
             </Text>
 
-            <Button title="Play Something" />
+            <Button title="Play Something" onPress={navigateToRandomMovieScreen} />
         </View>
     );
 };

@@ -6,7 +6,7 @@ const HomeScreen = props => {
     const {navigate} = useNavigation();
 
     const navigateToRandomMovieScreen = () => {
-        navigate('RandomMovie');
+        navigate('RandomMovieScreen');
     };
 
     return (

@@ -50,7 +50,7 @@ const ChooseSuperHeroScreen = props => {
         onPress={() => {
           onOpen('SuperHero');
         }}
-        title="Choose you Super Hero"
+        title="Choose your Super Hero"
       />
       <Picker
         id="SuperHero"

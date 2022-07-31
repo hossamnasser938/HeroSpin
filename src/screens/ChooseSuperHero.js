@@ -5,7 +5,7 @@ import { Picker, onOpen } from 'react-native-actions-sheet-picker';
 import SuperHeros from '../data/SuperHeros.json';
 
 const ChooseSuperHeroScreen = props => {
-  const {navigate} = useNavigation();
+  const {push} = useNavigation();
   
   const [data, setData] = useState([]);
   const [selected, setSelected] = useState(undefined);
@@ -17,7 +17,7 @@ const ChooseSuperHeroScreen = props => {
 
   const onSelected = (val) => {
     setSelected(val);
-    navigate('RandomMovieScreen');
+    push('RandomMovieScreen', {hero: val});
   };
 
   const filteredData = useMemo(() => {

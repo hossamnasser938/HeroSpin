@@ -3,10 +3,10 @@ import React from 'react';
 import {View, Text, Button, Image, StyleSheet} from 'react-native';
 
 const HomeScreen = props => {
-    const {navigate} = useNavigation();
+    const {push} = useNavigation();
 
     const navigateToRandomMovieScreen = () => {
-        navigate('RandomMovieScreen');
+        push('RandomMovieScreen');
     };
 
     return (

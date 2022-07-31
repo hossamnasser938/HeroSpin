@@ -34,7 +34,9 @@ const styles = StyleSheet.create({
         backgroundColor: 'white'
     },
     image: {
-        marginVertical: 40
+        marginVertical: 40,
+        width: 225,
+        height: 225,
     },
     title: {
         fontWeight: 'bold',

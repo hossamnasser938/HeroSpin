@@ -4,7 +4,7 @@ import { View, Text, Image, Button, StyleSheet } from 'react-native';
 import { Picker, onOpen } from 'react-native-actions-sheet-picker';
 import SuperHeros from '../data/SuperHeros.json';
 
-export default function ChooseSuperHeroScreen() {
+const ChooseSuperHeroScreen = props => {
   const {navigate} = useNavigation();
   
   const [data, setData] = useState([]);
@@ -86,3 +86,5 @@ const styles = StyleSheet.create({
       textAlign: 'center'
   }
 });
+
+export default ChooseSuperHeroScreen;

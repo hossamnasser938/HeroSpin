@@ -1,4 +1,5 @@
 import * as React from 'react';
+import {Image, StyleSheet} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -28,9 +29,16 @@ export default function App() {
   return (
     <NavigationContainer>
       <MainTabsNavigator.Navigator screenOptions={{header: () => null}}>
-        <MainTabsNavigator.Screen name="PickRandomMovieStack" component={PickRandomMovieStack} options={{tabBarLabel: 'Pick', tabBarIcon: () => null}} />
-        <MainTabsNavigator.Screen name="ChooseSuperHeroStack" component={ChooseSuperHeroStack} options={{tabBarLabel: "Choose & Pick", tabBarIcon: () => null}}/>
+        <MainTabsNavigator.Screen name="PickRandomMovieStack" component={PickRandomMovieStack} options={{tabBarLabel: 'Pick', tabBarIcon: () => <Image style={styles.tabBarIcon} source={require('./assets/images/Random.png')}/>}} />
+        <MainTabsNavigator.Screen name="ChooseSuperHeroStack" component={ChooseSuperHeroStack} options={{tabBarLabel: "Choose & Pick", tabBarIcon: () => <Image style={styles.tabBarIcon} source={require('./assets/images/Select.png')}/>}}/>
       </MainTabsNavigator.Navigator>
     </NavigationContainer>
   );
 }
+
+const styles = StyleSheet.create({
+  tabBarIcon: {
+    width: 24,
+    height: 24,
+  }
+});

@@ -11,7 +11,7 @@ const HomeScreen = props => {
 
     return (
         <View style={styles.container}>
-            <Image source={require('../../assets/images/RandomIcon.png')} style={styles.image}/>
+            <Image source={require('../../assets/images/NotSure.jpg')} style={styles.image}/>
 
             <Text style={styles.title}>
                 Not Sure What to Watch?
